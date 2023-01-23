@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open Lab1.html",
-            "file": "d:\\Lab\\WebApp\\Lab1.html"
+            "file": "d:\\Lab\\WebApp\\Lab2.html"
         }
     ]
 }
