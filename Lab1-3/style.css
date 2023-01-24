@@ -1,0 +1,45 @@
+body {
+    background-color: white;
+  }
+  
+  h1 {
+    color: rgb(45, 52, 192);
+    background-color: yellow;
+    text-align: center;
+  }
+
+  h2 {
+    color: rgb(237, 141, 237);
+    text-align: center;
+  }
+  
+  p {
+    font-family: verdana;
+    font-size: 20px;
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    border: 3px solid blue;
+    
+  }
+
+  h3 {
+    color: black;
+    text-align: left;
+  }
+
+  ul li {
+    background: white;
+    color: black;
+    margin: 5px;
+  }
+
+  ol li {
+    background: white;
+    color:black;
+    margin: 5px;
+  }
