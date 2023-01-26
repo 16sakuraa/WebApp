@@ -23,7 +23,7 @@
                 /* text-align: center; */
             }
             body {background-color: white;}
-            h1   {color: blue; background-color: yellow; text-align: center;}
+            h1   {color: blue; background-color: yellow; text-align: center; background-size: ;}
             h2   {color: rgb(225, 119, 225); text-align: center;}
             p    {color: black;}
             img  {display: block; margin-left: auto;border: 3px solid blue; float: right;}
@@ -66,9 +66,16 @@
                 background-color: cornflowerblue;
                 border-radius: 0px;
                 }
+
+                .col2 {
+                        grid-row-start: 4;
+                        grid-row-end: 5;
+                        grid-column-start: 2;
+                        grid-column-end: 3;
+                }
                 
                 aside {
-                    grid-row-start: 5;
+                    /* grid-row-start: 5;
                     grid-column-start: 1;
 
                     font-size: 40px;
@@ -77,8 +84,23 @@
                     font-style: italic;
 
                     border-top: 5px solid black;
-                    border-bottom: 5px solid black;
+                    border-bottom: 5px solid black; */
+
+                        grid-row-start: 5;
+                        grid-column-start: 1;
+                        border: 3px solid;
+                        border-left: 0px;
+                        border-right: 0px;
+                        width: 250px;
+                        margin-bottom: 30px;
+                        margin-left: 500px;
                      }
+                aside p {
+                        width: 250px;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        font-size: 35px;
+                    }
 
             </style>
     </head>
