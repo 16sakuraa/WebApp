@@ -4,7 +4,36 @@
     <body>
         <div id="maincontainer"></div>
         <script>
-            <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Click me to display Date and Time.</button>
+            var me_div = document.getElementById("maincontainer");
+            var inner_div = document.createElement("div");//<div><div>
+            var h2 = document.createElement("h2");
+
+            var text_element = document.createTextNode("Exercise 04: Javascript&DOM");
+            h2.appendChild(text_element);
+            me_div.appendChild(h2);
+
+
+            var button = document.createElement("button");
+            var button1 = document.createTextNode("Click me to display Date and Time");
+
+            button.onclick = (event) => {
+                console.log('clicked');
+            }
+
+            var button2 = document.createElement("button");
+
+
+
+            button.appendChild(button1);
+            me_div.appendChild(button);
+
+            
+ 
+            // var inner_div_text = document.createTextNode("More...");
+            // inner_div.appendChild(inner_div_text);//<div>More…</div>
+            // me_div.appendChild(inner_div);
+
+            
         </script>
     </body>
 </html>
