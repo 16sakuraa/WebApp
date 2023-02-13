@@ -19,19 +19,25 @@
             button.onclick = (event) => {
                 console.log('clicked');
             }
-
-            var button2 = document.createElement("button");
-
-
-
             button.appendChild(button1);
             me_div.appendChild(button);
 
+
+            var inner_p = document.createElement("p");
+            var infoButton = document.createTextNode("Personal Info");
+
+
+            inner_p.appendChild(infoButton);
+            me_div.appendChild(inner_p);
+
+            var h1 = document.createElement("h1");
+            var text2 = document.createTextNode("Snapshots");
+
+            h1.appendChild(text2);
+            me_div.appendChild(h1);
+
             
  
-            // var inner_div_text = document.createTextNode("More...");
-            // inner_div.appendChild(inner_div_text);//<div>More…</div>
-            // me_div.appendChild(inner_div);
 
             
         </script>
