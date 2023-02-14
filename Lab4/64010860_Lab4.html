@@ -184,9 +184,47 @@
             var worker = new Worker("worker.js"); // load web worker
   
             var button = document.querySelector("button");
+            var clicked = false;
+            var intervalId = null;
             button.addEventListener("click", function() 
             {
-                worker.postMessage("start");
+                if (!clicked)
+                {
+                    worker.postMessage("start");
+                    button.style.position = 'fixed';
+                    button.style.top = '0';
+                    button.style.right = '0';
+
+                    button.style.borderColor = "black";
+                    var bgColors = ["azure","grey","orange","black","navy","magenta"]
+                    var colors = ["blue","pink","green","orange","yellow","red"];
+                    var currentColor = 0;
+                    function changeColor() 
+                    {
+                        --currentColor
+
+                        if (currentColor < 0) currentColor = colors.length - 1;   // dont ask me how these loop works , i have zero idea
+
+                        for (var i = 0; i < 7; i++) 
+                        {
+                            button.style.color = colors[(currentColor +i) % colors.length]
+                            button.style.backgroundColor = bgColors[(currentColor+i)% colors.length]
+                        }
+                    }
+                    intervalID = setInterval(changeColor, 1000)
+                    clicked = true;
+                }
+                else if (clicked)
+                {
+                    console.log('stop')
+                    worker.postMessage("stop")
+                    clicked = false
+                    clearInterval(intervalID)
+                    button.style.position = '';
+                }
+                
+
+                
             });
             
             worker.addEventListener("message", function(event) 
@@ -195,24 +233,6 @@
                 
             });
 
-            button.onclick = (event) =>
-            {
-                var colors = ["blue","pink","maroon","orange","yellow","magenta"];
-                var currentColor = 0;
-                
-                function changeColor() 
-                {
-                    --currentColor
-
-                    if (currentColor < 0) currentColor = colors.length - 1;
-
-                    for (var i = 0; i < 7; i++) 
-                    {
-                        button.style.color = colors[(currentColor +i) % colors.length]
-                    }
-                }
-                setInterval(changeColor, 1000)
-            }
             
             
         </script>
