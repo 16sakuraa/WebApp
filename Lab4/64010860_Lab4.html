@@ -80,7 +80,7 @@
             pic1text.textContent = "Fireworks";
             pic1.appendChild(pic1text)
             ul2.appendChild(pic1);
-            me_div.append(ul2);
+            me_div.append(ul2); // add bullet to the main page
 
             pic1text.onclick = function() {
 
@@ -105,6 +105,22 @@
             pic2.appendChild(pic2text);
             ul2.appendChild(pic2);
 
+            pic2text.onclick = function() {
+
+                var existingImg = me_div.getElementsByTagName("img")[0];
+                if (existingImg) {
+                    me_div.removeChild(existingImg);
+                }
+                var img = document.createElement("img");
+                img.src = "https://ca-times.brightspotcdn.com/dims4/default/0b8846b/2147483647/strip/true/crop/2000x1334+0+0/resize/1200x800!/format/webp/quality/80/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F09%2Fe2%2Fe31acf1245cdb176efb337baae8c%2Fhuc2-018995-r-0366c77b.jpeg";
+                img.alt = "Crest";
+                img.width = "600";
+                img.height = "400";
+                me_div.appendChild(img);
+            };
+            ul2.appendChild(pic2);
+
+
             var pic3 = document.createElement("li");
             var pic3text = document.createElement("a");
             pic3text.href ="#";
@@ -112,11 +128,41 @@
             pic3.appendChild(pic3text);
             ul2.appendChild(pic3);
 
+            pic3text.onclick = function() {
+
+                var existingImg = me_div.getElementsByTagName("img")[0];
+                if (existingImg) {
+                    me_div.removeChild(existingImg);
+                }
+                var img = document.createElement("img");
+                img.src = "https://mymodernmet.com/wp/wp-content/uploads/2017/10/cat-poses-martial-arts-5.jpg";
+                img.alt = "action";
+                img.width = "600";
+                img.height = "400";
+                me_div.appendChild(img);
+            };
+            ul2.appendChild(pic3);
+
             var pic4 = document.createElement("li");
             var pic4text = document.createElement("a");
             pic4text.href ="#";
             pic4text.textContent = "Buffalo";
             pic4.appendChild(pic4text);
+            ul2.appendChild(pic4);
+
+            pic4text.onclick = function() {
+
+                var existingImg = me_div.getElementsByTagName("img")[0];
+                if (existingImg) {
+                    me_div.removeChild(existingImg);
+                }
+                var img = document.createElement("img");
+                img.src = "https://scontent.fbkk12-4.fna.fbcdn.net/v/t1.6435-9/58442530_573598986484372_8436479963179253760_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=825194&_nc_eui2=AeE6wgJbvvWDmyiVJgJdcSGjpLKETAxKOHOksoRMDEo4czH6YzRGXoF1B3ksIrMWgwxqaq0fMvNlt2Qy-K1t17Uz&_nc_ohc=D4zw3jf3i6IAX8GfbFl&_nc_ht=scontent.fbkk12-4.fna&oh=00_AfD6Aht3i6O2_D_AcRgYM4RZ3wufZSF1Eb0ImkrO98hEbQ&oe=64130219";
+                img.alt = "action";
+                img.width = "600";
+                img.height = "400";
+                me_div.appendChild(img);
+            };
             ul2.appendChild(pic4);
             
             
