@@ -5,7 +5,7 @@
         <div id="maincontainer"></div>
         <script>
             var me_div = document.getElementById("maincontainer");
-            var inner_div = document.createElement("div");//<div><div>
+            var inner_div = document.createElement("div");
             var h2 = document.createElement("h2");
 
             var text_element = document.createTextNode("Exercise 04: Javascript&DOM");
@@ -13,32 +13,112 @@
             me_div.appendChild(h2);
 
 
-            var button = document.createElement("button");
-            var button1 = document.createTextNode("Click me to display Date and Time");
+            var link = document.createElement("a"); // start of Personal Info button
+            link.setAttribute("id","infoButton");
+            link.style.color = "pink";
+            link.href ="#";
+            link.textContent = "Personal Info";
+            link.onclick = showHidden;
+            link.onmouseover = ColorOnMouseOver;
+            link.onmouseout = mouseOut;
+            me_div.appendChild(link);
 
-            button.onclick = (event) => {
-                console.log('clicked');
+            var hiddenText = document.createElement("div");
+            hiddenText.setAttribute("id","hiddenText");
+            hiddenText.style.display = "none";
+
+            var ul = document.createElement("ul"); // bullet inside Personal Info
+            var li1 = document.createElement("li");
+            var li1Text = document.createTextNode("Suppaphol Areewattanawong, ID: 64010860");
+            li1.appendChild(li1Text);
+            ul.appendChild(li1);
+            var li2 = document.createElement("li");
+            var li2Text = document.createTextNode("Subject: Web Application Development");
+            li2.appendChild(li2Text);
+            ul.appendChild(li2);
+            var li3 = document.createElement("li");
+            var li3Text = document.createTextNode("Semester: 2");
+            li3.appendChild(li3Text);
+            ul.appendChild(li3);
+            hiddenText.appendChild(ul); // append all bullet into hiddenText
+
+            function showHidden() 
+            {
+                    var x = document.getElementById('hiddenText');
+                    if (x.style.display === "none") {
+                        x.style.display = "block";
+                    }   
+                    else {
+                    x.style.display = "none";
+                    }
             }
-            button.appendChild(button1);
-            me_div.appendChild(button);
 
+            function ColorOnMouseOver()
+            {
+                link.style.color = "blue";
+                link.style.backgroundColor = "yellow";
+            }
 
-            var inner_p = document.createElement("p");
-            var infoButton = document.createTextNode("Personal Info");
-
-
-            inner_p.appendChild(infoButton);
-            me_div.appendChild(inner_p);
+            function mouseOut()
+            {
+                link.style.color = "pink";
+                link.style.backgroundColor = "white";
+            }
+            
+            me_div.appendChild(hiddenText); // end of Personal Info button
 
             var h1 = document.createElement("h1");
             var text2 = document.createTextNode("Snapshots");
-
-            h1.appendChild(text2);
+            h1.setAttribute("id","snapshots");
+            h1.appendChild(text2)
             me_div.appendChild(h1);
 
-            
- 
+            var ul2 = document.createElement("ul"); // start of List below Snapshots Text
+            var pic1 = document.createElement("li");
+            var pic1text = document.createElement("a");
+            pic1text.href ="#";
+            pic1text.textContent = "Fireworks";
+            pic1.appendChild(pic1text)
+            ul2.appendChild(pic1);
+            me_div.append(ul2);
 
+            pic1text.onclick = function() {
+
+                var existingImg = me_div.getElementsByTagName("img")[0];
+                if (existingImg) {
+                    me_div.removeChild(existingImg);
+                }
+                var img = document.createElement("img");
+                img.src = "https://www.ontariosciencecentre.ca/media/2098/fireworksheader3.jpg";
+                img.alt = "Fireworks";
+                img.width = "600";
+                img.height = "400";
+                me_div.appendChild(img);
+            };
+            ul2.appendChild(pic1);
+
+            
+            var pic2 = document.createElement("li");
+            var pic2text = document.createElement("a");
+            pic2text.href ="#";
+            pic2text.textContent = "Crest";
+            pic2.appendChild(pic2text);
+            ul2.appendChild(pic2);
+
+            var pic3 = document.createElement("li");
+            var pic3text = document.createElement("a");
+            pic3text.href ="#";
+            pic3text.textContent = "Action";
+            pic3.appendChild(pic3text);
+            ul2.appendChild(pic3);
+
+            var pic4 = document.createElement("li");
+            var pic4text = document.createElement("a");
+            pic4text.href ="#";
+            pic4text.textContent = "Buffalo";
+            pic4.appendChild(pic4text);
+            ul2.appendChild(pic4);
+            
             
         </script>
     </body>
