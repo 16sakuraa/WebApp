@@ -13,12 +13,7 @@
             me_div.appendChild(h2);
 
             var button = document.createElement("button");
-            var buttonText = document.createTextNode("Click me to display Date and Time");
-
-            button.addEventListener('click', function() {
-                    var date = new Date();
-                    alert(date);
-            });
+            var buttonText = document.createTextNode("Click me to display Date and Time"); // Display button , web worker is located at the end of script tag
 
             button.appendChild(buttonText);
             me_div.appendChild(button);
@@ -184,6 +179,20 @@
             img.width = "1000";
             img.height = "444";
             me_div.appendChild(img);
+
+            var worker = new Worker("worker.js"); // load web worker
+  
+            var button = document.querySelector("button");
+            button.addEventListener("click", function() 
+            {
+                worker.postMessage("start");
+            });
+            
+            worker.addEventListener("message", function(event) 
+            {
+                button.textContent = event.data;
+                
+            });
             
             
         </script>
