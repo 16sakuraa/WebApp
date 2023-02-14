@@ -17,6 +17,7 @@
 
             button.appendChild(buttonText);
             me_div.appendChild(button);
+            
 
             me_div.appendChild(document.createElement("br"));
             me_div.appendChild(document.createElement("br"));
@@ -193,6 +194,25 @@
                 button.textContent = event.data;
                 
             });
+
+            button.onclick = (event) =>
+            {
+                var colors = ["blue","pink","maroon","orange","yellow","magenta"];
+                var currentColor = 0;
+                
+                function changeColor() 
+                {
+                    --currentColor
+
+                    if (currentColor < 0) currentColor = colors.length - 1;
+
+                    for (var i = 0; i < 7; i++) 
+                    {
+                        button.style.color = colors[(currentColor +i) % colors.length]
+                    }
+                }
+                setInterval(changeColor, 1000)
+            }
             
             
         </script>
