@@ -12,7 +12,20 @@
             h2.appendChild(text_element);
             me_div.appendChild(h2);
 
+            var button = document.createElement("button");
+            var buttonText = document.createTextNode("Click me to display Date and Time");
 
+            button.addEventListener('click', function() {
+                    var date = new Date();
+                    alert(date);
+            });
+
+            button.appendChild(buttonText);
+            me_div.appendChild(button);
+
+            me_div.appendChild(document.createElement("br"));
+            me_div.appendChild(document.createElement("br"));
+            me_div.appendChild(document.createElement("br"));
             var link = document.createElement("a"); // start of Personal Info button
             link.setAttribute("id","infoButton");
             link.style.color = "pink";
@@ -165,7 +178,7 @@
             };
             ul2.appendChild(pic4);
 
-            var img = document.createElement("img");
+            var img = document.createElement("img"); // the picture that shown before you click on each pic of bullet
             img.src = "https://as1.ftcdn.net/v2/jpg/02/70/72/56/1000_F_270725613_4XgF5u5X0kC6CFOV9SIXb3F1awoxF2rA.jpg";
             img.alt = "action";
             img.width = "1000";
