@@ -5,7 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-// const h = <div><h1>SW Studio</h1></div>;
 root.render(
   <React.StrictMode>
     <App />
@@ -18,13 +17,6 @@ class Topic extends React.Component {
     return <div id="food"><center>โหวตอาหาร</center></div>;
   }
 }
-root.render(<Topic/>);
-
-// const PlusButton = ({count, increaseCount}) => {
-//   return(
-//     <button className="upvote" onClick={() => increaseCount(count + 1)}>Click to Vote</button>
-//   )
-// };
 
 const PlusButton = ({ count, increaseCount }) => {
   const handleClick = () => {
@@ -36,6 +28,20 @@ const PlusButton = ({ count, increaseCount }) => {
   return (
     <button className="upvote" onClick={handleClick}>
       Click to Vote
+    </button>
+  );
+};
+
+const MinusButton = ({ count, decreaseCount }) => {
+  const handleClick = () => {
+    if (count > 0) {
+      decreaseCount(count - 1);
+    }
+  };
+
+  return (
+    <button className="downvote" onClick={handleClick}>
+      Click to Unvote
     </button>
   );
 };
@@ -54,7 +60,7 @@ const Counter = ({ count }) => {
   return (
     <div className='boxCount'>
       <p>
-      <center>{countText}</center>
+      {countText}
       </p>
     </div>
   );
@@ -71,17 +77,17 @@ class Box extends React.Component {
   render() {
   return (
     <div className="box">
-      <img src="/960x0.jpg" alt="hutao" />
+      <img src="padKrapao.jpg" alt="hutao" />
       <p id="head">อาหารคาว</p>
-      <p id="subhead">hutao</p>
-      <p id="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><br></br>
-      <PlusButton count={this.state.count} increaseCount={(count) => this.setState({count})}/>
+      <p id="subhead">ข้าวกะเพราไก่ไข่ดาว</p>
+      <p id="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><br></br><br></br>
+      <center><PlusButton count={this.state.count} increaseCount={(count) => this.setState({count})}/>
       <Counter count={this.state.count} />
+      <MinusButton count={this.state.count} decreaseCount={(count) => this.setState({count})}/></center>
     </div>
   );
   }
 };
-
 
 root.render(
   <React.StrictMode>
