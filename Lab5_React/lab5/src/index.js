@@ -23,6 +23,10 @@ const PlusButton = ({ count, increaseCount }) => {
     if (count < 10) {
       increaseCount(count + 1);
     }
+    else if (count === 10)
+    {
+      alert("Cannot vote more")
+    }
   };
 
   return (
@@ -36,6 +40,10 @@ const MinusButton = ({ count, decreaseCount }) => {
   const handleClick = () => {
     if (count > 0) {
       decreaseCount(count - 1);
+    }
+    else if (count === 0)
+    {
+      alert("Cannot Unvote")
     }
   };
 
@@ -67,7 +75,10 @@ const Counter = ({ count }) => {
 };
 
 
+
 class Box extends React.Component {
+
+
 
   constructor(props){
     super(props);
