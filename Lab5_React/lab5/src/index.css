@@ -21,14 +21,13 @@ code {
 }
 
 .box {
+  
   margin-top:20px;
   border: 3px solid black;
   border-radius: 15px;
-  padding: 30px;
-  /* display: flex; */
-  height:300px;
+  padding: 20px;
+  height:320px;
   width:900px;
-  /* align-items: center; */
   background-color: aliceblue;
   margin-left: auto;
   margin-right: auto;
@@ -37,9 +36,8 @@ code {
 .box img {
   width: 250px;
   height: 250px;
-  /* display:flex; */
-  float: right;
   margin-top: 10px;
+  float:right;
 }
 
 .box #head {
@@ -57,34 +55,38 @@ code {
   font-size:medium;
 }
 
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .upvote {
   margin-top: 10px;
   padding: 8px 8px;
-  float:left;
   margin-right: 5px;
+  display:inline-block;
 }
 
 .downvote {
   margin-top: 10px;
   padding: 8px 8px;
-  float:left;
+  display:inline-block;
   margin-left: 5px;
 }
 
 .boxCount {
-  border: 3px solid black;
+  border: 3px solid purple;
   background-color: greenyellow;
   border-radius: 15px;
   height: fit-content;
   width:fit-content;
   padding-left: 10px;
   padding-right: 10px;
-  /* margin-left: auto;
-  margin-right:auto; */
-  float:left;
-  /* display:flex;
-  align-items: center; */
+  display:inline-block;
 }
+
 
 .boxCount p {
   display:inline-block;
