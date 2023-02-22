@@ -40,7 +40,7 @@ const Box2 = () => {
         imgAlt="Fried Rice"
         headerText="อาหารคาว"
         subHeaderText="ข้าวผัด" 
-        mainText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+        mainText="Gravida dictum fusce ut placerat orci. Vitae congue mauris rhoncus aenean. Erat nam at lectus urna duis. Ut sem nulla pharetra diam sit amet. Sit amet nisl suscipit adipiscing bibendum est ultricies integer."/>
     </div>
   );
 }; 
@@ -54,7 +54,7 @@ const Box3 = () => {
         imgAlt="Mango Sticky Rice"
         headerText="ของหวาน"
         subHeaderText="ข้าวเหนียวมะม่วง" 
-        mainText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+        mainText="Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. Tincidunt eget nullam non nisi. Vitae nunc sed velit dignissim sodales ut. Eleifend donec pretium vulputate sapien nec sagittis. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus."/>
     </div>
   );
 }; 
