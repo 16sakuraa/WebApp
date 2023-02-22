@@ -46,11 +46,26 @@ const Box2 = () => {
 }; 
 
 
+const Box3 = () => {
+  return (
+    <div>
+      <Box
+        imgSrc="mangostickyrice2.jpg"
+        imgAlt="Mango Sticky Rice"
+        headerText="ของหวาน"
+        subHeaderText="ข้าวเหนียวมะม่วง" 
+        mainText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+    </div>
+  );
+}; 
+
+
 root.render(
   <React.StrictMode>
     <Topic />
     <Box1 />
     <Box2 />
+    <Box3 />
   </React.StrictMode>
 );
 

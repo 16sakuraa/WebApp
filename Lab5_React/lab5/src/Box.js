@@ -15,10 +15,10 @@ class Box extends React.Component {
       return (
         <div className="box">
           <img src={imgSrc} alt={imgAlt} />
+          <br />
           <p id="head">{headerText}</p>
           <p id="subhead">{subHeaderText}</p>
           <p id="text">{mainText}</p>
-          <br />
           <br />
           <br />
           <br />
